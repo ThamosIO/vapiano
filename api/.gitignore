@@ -1,0 +1,6 @@
+# Ignored to keep the repo light, would be tracked otherwise
+yarn.lock
+coverage/
+*.log
+scripts/scrapped-verbs.json
+package-lock.json
