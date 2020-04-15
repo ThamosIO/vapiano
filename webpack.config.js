@@ -1,7 +1,6 @@
 'use strict';
 
 const { resolve } = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const babelLoader = {
   loader: 'babel-loader',

@@ -5,3 +5,7 @@ You need to have a `json` file containing all the verbs, it should be called `sc
 ```bash
 $ npm run insert-data
 ```
+
+## Credits
+
+Icons made by Freepik from www.flaticon.com.
