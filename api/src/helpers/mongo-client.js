@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 const genericPool = require('generic-pool');
 
 const { parseBoolean } = require('../helpers/common');
-const logger = require('../helpers/logger');
+const logger = require('../../../logger');
 
 const {
   URI_PREFIX: prefix,

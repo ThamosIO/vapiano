@@ -1,4 +1,4 @@
-const logger = require('../helpers/logger');
+const logger = require('../../../logger');
 
 function errorHandler(err, req, res, next) {
   const basicMessage = 'Internal server error';
