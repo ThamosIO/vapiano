@@ -13,7 +13,6 @@ const ButtonLink = styled(Link)`
   height: 8rem;
   background: #fffbf3;
   border-radius: 4rem;
-  border: 0.75rem solid #92cd9a;
   display: flex;
   align-items: center;
   flex-direction: column;
