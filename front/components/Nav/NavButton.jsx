@@ -16,8 +16,9 @@ const ButtonLink = styled(Link)`
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 0.8rem;
+  padding-top: 1.6rem;
   text-decoration: none;
+  margin: 0 1rem;
 `;
 
 const Text = styled.div`

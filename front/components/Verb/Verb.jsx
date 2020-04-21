@@ -23,6 +23,7 @@ const ToggleContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin-bottom: 1rem;
 `;
 
 const CheckboxLabel = styled.p`

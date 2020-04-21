@@ -31,7 +31,6 @@ const Study = () => {
     setFilters(value);
   };
 
-  console.log(verb?.tenses);
   return (
     <Container>
       <h3>Study</h3>
