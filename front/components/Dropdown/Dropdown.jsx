@@ -1,23 +1,18 @@
-import { Dropdown as SemanticDropdown, Container } from 'semantic-ui-react';
-import { useState } from 'preact/hooks';
+import {
+  Dropdown as SemanticDropdown,
+  Container,
+  Label,
+} from 'semantic-ui-react';
+import styled from 'styled-components';
 
-import { API_URL } from '../API/APIContext.jsx';
-import Verb from '../Verb/Verb.jsx';
+const DropContainer = styled.div`
+  margin-bottom: 1rem;
+`;
 
-const Dropdown = ({ verbs }) => {
-  const [verb, setVerb] = useState(null);
-
-  const onChange = async (e, { value }) => {
-    const found = verbs.find((v) => v.verb === value);
-
-    const response = await fetch(`${API_URL}/verbs/${found._id}`);
-    const res = await response.json();
-
-    setVerb(res);
-  };
-
-  return (
-    <Container fluid>
+const Dropdown = ({ verbs, tenses, onVerbChange, onFilterChange }) => (
+  <Container>
+    <DropContainer>
+      <p>Choose a verb:</p>
       <SemanticDropdown
         placeholder="Verbs"
         search
@@ -27,11 +22,26 @@ const Dropdown = ({ verbs }) => {
           text: verb,
           value: verb,
         }))}
-        onChange={onChange}
+        onChange={onVerbChange}
       />
-      {verb && <Verb verb={verb}></Verb>}
-    </Container>
-  );
+    </DropContainer>
+    <DropContainer>
+      <p>Choose tenses:</p>
+      <SemanticDropdown
+        placeholder="Tenses"
+        multiple
+        selection
+        fluid
+        disabled={!tenses.length}
+        options={tenses}
+        onChange={onFilterChange}
+      />
+    </DropContainer>
+  </Container>
+);
+
+Dropdown.defaultProps = {
+  tenses: [],
 };
 
 export default Dropdown;
