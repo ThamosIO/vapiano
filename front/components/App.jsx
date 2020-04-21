@@ -8,8 +8,8 @@ import {
 import { APIProvider } from './API/APIContext.jsx';
 import GlobalStyle from './GlobalStyle.jsx';
 import Nav from './Nav/Nav.jsx';
-import Study from './Study/Study.jsx';
-import Train from './Train/Train.jsx';
+import Study from './Study/Study.js';
+import Train from './Train/Train.js';
 
 const App = () => (
   <>
