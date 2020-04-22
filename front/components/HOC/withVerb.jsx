@@ -21,6 +21,15 @@ function withVerb(WrappedComponent, title) {
       setVerb(res);
     };
 
+    const randomize = async (e, { value }) => {
+      const random = verbs[Math.trunc(Math.random() * verbs.length)];
+
+      const response = await fetch(`${API_URL}/verbs/${random._id}`);
+      const res = await response.json();
+
+      setVerb(res);
+    };
+
     const tenses = verb?.tenses.map(({ tense }) => ({
       key: tense,
       value: tense,
@@ -39,6 +48,7 @@ function withVerb(WrappedComponent, title) {
           tenses={tenses}
           onVerbChange={onVerbChange}
           onFilterChange={onFilterChange}
+          randomize={randomize}
         />
         {verb && (
           <WrappedComponent
