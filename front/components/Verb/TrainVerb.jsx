@@ -1,6 +1,9 @@
 import { Checkbox, Table, TableCell } from 'semantic-ui-react';
 import styled, { css } from 'styled-components';
 import { useState } from 'preact/hooks';
+
+import { generateKey } from '../../helpers/generators';
+
 import Answer from './Answer.jsx';
 
 const TensesContainer = styled.div`
@@ -71,7 +74,7 @@ const TrainVerb = ({ tenses, verb, translation }) => {
                   </TableCell>
                 </Table.Row>
                 {tense.conjugation.map(({ person, result }) => (
-                  <Table.Row>
+                  <Table.Row key={generateKey()}>
                     <Answer person={person} result={result} />
                   </Table.Row>
                 ))}
