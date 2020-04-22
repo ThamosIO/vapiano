@@ -39,7 +39,7 @@ const P = styled.p`
   text-align: center;
 `;
 
-const TrainVerb = ({ tenses, verb }) => {
+const TrainVerb = ({ tenses, verb, translation }) => {
   const [layout, setLayout] = useState(true);
 
   return (
@@ -48,7 +48,9 @@ const TrainVerb = ({ tenses, verb }) => {
         <CheckboxLabel>One per line</CheckboxLabel>
         <Checkbox checked={layout} toggle onChange={() => setLayout(!layout)} />
       </ToggleContainer>
-      <Title>{verb}</Title>
+      <Title>
+        {verb} – {translation?.join(', ')}
+      </Title>
       <P>Click to reveal</P>
       <TensesContainer layout={layout}>
         {tenses.map((tense) => (

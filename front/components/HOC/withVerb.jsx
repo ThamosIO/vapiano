@@ -43,6 +43,7 @@ function withVerb(WrappedComponent, title) {
         {verb && (
           <WrappedComponent
             verb={verb.verb}
+            translation={verb.translation}
             tenses={
               !filters.length
                 ? verb.tenses

@@ -34,7 +34,7 @@ const Title = styled.h2`
   text-align: center;
 `;
 
-const Verb = ({ tenses, verb }) => {
+const Verb = ({ tenses, verb, translation }) => {
   const [layout, setLayout] = useState(true);
 
   return (
@@ -43,7 +43,9 @@ const Verb = ({ tenses, verb }) => {
         <CheckboxLabel>One per line</CheckboxLabel>
         <Checkbox checked={layout} toggle onChange={() => setLayout(!layout)} />
       </ToggleContainer>
-      <Title>{verb}</Title>
+      <Title>
+        {verb} – {translation?.join(', ')}
+      </Title>
       <TensesContainer layout={layout}>
         {tenses.map((tense) => (
           <TenseContainer>
