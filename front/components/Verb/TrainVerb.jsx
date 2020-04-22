@@ -1,6 +1,7 @@
-import { Table, Checkbox, TableCell } from 'semantic-ui-react';
+import { Checkbox, Table, TableCell } from 'semantic-ui-react';
 import styled, { css } from 'styled-components';
 import { useState } from 'preact/hooks';
+import Answer from './Answer.jsx';
 
 const TensesContainer = styled.div`
   display: flex;
@@ -34,7 +35,11 @@ const Title = styled.h2`
   text-align: center;
 `;
 
-const Verb = ({ tenses, verb }) => {
+const P = styled.p`
+  text-align: center;
+`;
+
+const TrainVerb = ({ tenses, verb }) => {
   const [layout, setLayout] = useState(true);
 
   return (
@@ -44,6 +49,7 @@ const Verb = ({ tenses, verb }) => {
         <Checkbox checked={layout} toggle onChange={() => setLayout(!layout)} />
       </ToggleContainer>
       <Title>{verb}</Title>
+      <P>Click to reveal</P>
       <TensesContainer layout={layout}>
         {tenses.map((tense) => (
           <TenseContainer>
@@ -51,18 +57,20 @@ const Verb = ({ tenses, verb }) => {
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell />
-                  <Table.HeaderCell>Conjugation</Table.HeaderCell>
+                  <Table.HeaderCell>Your answer</Table.HeaderCell>
+                  <Table.HeaderCell>Actual</Table.HeaderCell>
                 </Table.Row>
               </Table.Header>
               <Table.Body>
                 <Table.Row>
                   <TableCell positive>Tense</TableCell>
-                  <TableCell positive>{tense.tense}</TableCell>
+                  <TableCell positive colSpan="2">
+                    {tense.tense}
+                  </TableCell>
                 </Table.Row>
                 {tense.conjugation.map(({ person, result }) => (
                   <Table.Row>
-                    <Table.Cell>{person}</Table.Cell>
-                    <Table.Cell>{result}</Table.Cell>
+                    <Answer person={person} result={result} />
                   </Table.Row>
                 ))}
               </Table.Body>
@@ -74,4 +82,4 @@ const Verb = ({ tenses, verb }) => {
   );
 };
 
-export default Verb;
+export default TrainVerb;

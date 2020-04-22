@@ -1,4 +1,4 @@
-import Verb from '../Verb/Verb.jsx';
+import TrainVerb from '../Verb/TrainVerb.jsx';
 import withVerb from '../HOC/withVerb.jsx'
 
-export default withVerb(Verb, 'Train');
+export default withVerb(TrainVerb, 'Train');

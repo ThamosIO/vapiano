@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
   #vapiano {
     height: 100%;
+    overflow-x: hidden;
   }
 `;
 

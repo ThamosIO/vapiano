@@ -13,7 +13,9 @@ I made it so that you can use it for any language (that uses the latin alphabet 
 Gives you the possibility to :
 
 - Study any verb (from your database) in any tense, with the ability to filter by tense
-- Train any verb in any tense (:warning: not done yet)
+- Train any verb in any tense
+
+![Sample](https://github.com/ThamosIO/vapiano/blob/master/front/assets/sample.png?raw=true)
 
 ## What you need to do
 
@@ -35,6 +37,24 @@ Once this is done:
 $ npm i
 ```
 
+## What kind of data you need
+
+You need a set of data to insert in the DB.
+
+This project works well with [this scrapper](https://github.com/ThamosIO/language-verb-scrapper) (which was created for this project).
+
+Use it to get the right data. The scrapper will create a json file which can be inserted using the `insert-data` script.
+
+> You could also insert verbs directly into the database but it might be tedious.
+
+For the insertion script to work, you need to have a `json` file containing all the verbs, it should be called `scrapped-verbs.json` and be placed in the `./api/scripts` folder.
+
+Once you have it, run the following command:
+
+```bash
+$ npm run insert-data
+```
+
 ## Starting the project
 
 ```bash
@@ -42,18 +62,6 @@ $ npm start
 ```
 
 You can now go to `http://localhost:8080`.
-
-## Inserting data
-
-> This project works well with [this scrapper](https://github.com/ThamosIO/language-verb-scrapper).
-
-You can either insert verbs directly into the database but it will be tedious.
-
-You need to have a `json` file containing all the verbs, it should be called `scrapped-verbs.json` and be placed in the `./api/scripts` folder.
-
-```bash
-$ npm run insert-data
-```
 
 ## Credits
 
