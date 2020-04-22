@@ -13,6 +13,8 @@ function withVerb(WrappedComponent, title) {
     const { verbs } = API;
 
     const onVerbChange = async (e, { value }) => {
+      if (!value) return;
+
       const found = verbs.find((v) => v.verb === value);
 
       const response = await fetch(`${API_URL}/verbs/${found._id}`);
@@ -21,10 +23,10 @@ function withVerb(WrappedComponent, title) {
       setVerb(res);
     };
 
-    const randomize = async (e, { value }) => {
+    const randomize = async () => {
       const random = verbs[Math.trunc(Math.random() * verbs.length)];
 
-      onVerbChange(e, { value: random.verb });
+      onVerbChange(null, { value: random.verb });
     };
 
     const tenses = verb?.tenses.map(({ tense }) => ({
