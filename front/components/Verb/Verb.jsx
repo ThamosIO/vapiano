@@ -43,7 +43,7 @@ const Verb = ({ tenses, verb, translation }) => {
   return (
     <>
       <ToggleContainer>
-        <CheckboxLabel>One per line</CheckboxLabel>
+        <CheckboxLabel>{t('one_per_line')}</CheckboxLabel>
         <Checkbox checked={layout} toggle onChange={() => setLayout(!layout)} />
       </ToggleContainer>
       <Title>

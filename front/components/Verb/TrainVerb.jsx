@@ -1,6 +1,7 @@
 import { Checkbox, Table, TableCell } from 'semantic-ui-react';
 import styled, { css } from 'styled-components';
 import { useState } from 'preact/hooks';
+import { useTranslation } from 'react-i18next';
 
 import { generateKey } from '../../helpers/generators';
 
@@ -43,18 +44,19 @@ const P = styled.p`
 `;
 
 const TrainVerb = ({ tenses, verb, translation }) => {
+  const { t } = useTranslation();
   const [layout, setLayout] = useState(true);
 
   return (
     <>
       <ToggleContainer>
-        <CheckboxLabel>One per line</CheckboxLabel>
+        <CheckboxLabel>{t('one_per_line')}</CheckboxLabel>
         <Checkbox checked={layout} toggle onChange={() => setLayout(!layout)} />
       </ToggleContainer>
       <Title>
         {verb} – {translation?.join(', ')}
       </Title>
-      <P>Click to reveal</P>
+      <P>{t('train.reveal')}</P>
       <TensesContainer layout={layout}>
         {tenses.map((tense) => (
           <TenseContainer>
@@ -62,8 +64,8 @@ const TrainVerb = ({ tenses, verb, translation }) => {
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell />
-                  <Table.HeaderCell>Your answer</Table.HeaderCell>
-                  <Table.HeaderCell>Actual</Table.HeaderCell>
+                  <Table.HeaderCell>{t('train.answer')}</Table.HeaderCell>
+                  <Table.HeaderCell>{t('train.actual')}</Table.HeaderCell>
                 </Table.Row>
               </Table.Header>
               <Table.Body>

@@ -1,3 +1,14 @@
 welcome: Benvenuto su Vapiano
 study:
   title: Studiare
+train:
+  title: Allenamento
+  reveal: Click per rivelare la risposta
+  answer: La tua risposta
+  actual: La vera
+conjugation: Coniugazione
+tense: Tempo
+tenses: Tempi
+random: Verbo casuale
+verbs: Verbi
+one_per_line: Uno per riga

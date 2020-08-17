@@ -1,5 +1,14 @@
 welcome: Bienvenue sur Vapiano
 study:
   title: Réviser
-tense: Temps
+train:
+  title: Entraînement
+  reveal: Clique pour réveler la réponse
+  answer: Ta réponse
+  actual: La vraie
 conjugation: Conjugaison
+tense: Temps
+tenses: Temps
+random: Verbe aléatoire
+verbs: Verbes
+one_per_line: Un par ligne

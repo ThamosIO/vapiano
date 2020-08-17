@@ -1,5 +1,14 @@
 welcome: Welcome to Vapiano
 study:
   title: Study
-tense: Tense
+train:
+  title: Train
+  reveal: Click to reveal the answer
+  answer: Your answer
+  actual: The actual
 conjugation: Conjugation
+tense: Tense
+tenses: Tenses
+random: Random verb
+verbs: Verbs
+one_per_line: One per line
