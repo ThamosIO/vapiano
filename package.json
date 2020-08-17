@@ -16,11 +16,13 @@
     "express": "4.17.1",
     "generic-pool": "3.6.0",
     "helmet": "3.21.3",
+    "i18next": "19.4.5",
     "mongodb": "3.5.6",
     "node-fetch": "2.6.0",
     "object-path": "0.11.4",
     "preact": "10.4.0",
     "preact-fluid": "0.9.1",
+    "react-i18next": "11.5.0",
     "react-router-dom": "5.1.2",
     "regenerator-runtime": "0.13.5",
     "semantic-ui-react": "0.88.2",
@@ -31,6 +33,7 @@
     "@babel/core": "7.9.0",
     "@babel/plugin-transform-react-jsx": "7.9.4",
     "@babel/preset-env": "7.9.5",
+    "@babel/preset-react": "^7.10.1",
     "@wordpress/babel-plugin-import-jsx-pragma": "2.5.0",
     "babel-loader": "8.1.0",
     "babel-plugin-styled-components": "1.10.7",
@@ -44,10 +47,12 @@
     "nodemon": "2.0.2",
     "prettier": "2.0.4",
     "querystring": "0.2.0",
+    "regenerator-runtime": "0.13.5",
     "styled-components": "5.1.0",
     "url-loader": "4.0.0",
     "webpack": "4.42.1",
     "webpack-cli": "3.3.11",
-    "webpack-dev-middleware": "3.7.2"
+    "webpack-dev-middleware": "3.7.2",
+    "yaml-loader": "0.6.0"
   }
 }

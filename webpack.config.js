@@ -41,6 +41,11 @@ const rules = [
     include: resolve(__dirname, 'front', 'assets'),
     use: [urlLoader],
   },
+  {
+    test: /\.ya?ml$/,
+    type: 'json',
+    use: 'yaml-loader',
+  },
 ];
 
 const config = {

@@ -4,7 +4,7 @@ import {
   Redirect,
   Route,
 } from 'react-router-dom';
-
+import './i18n';
 import { APIProvider } from './API/APIContext.jsx';
 import GlobalStyle from './GlobalStyle.jsx';
 import Nav from './Nav/Nav.jsx';

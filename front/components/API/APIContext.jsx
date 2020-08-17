@@ -1,7 +1,7 @@
 import { createContext } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 
-const APIContext = createContext();
+const APIContext = createContext(null);
 
 export const API_URL = 'http://localhost:8080/api';
 

@@ -1,11 +1,13 @@
 import { useContext, useState } from 'preact/hooks';
+import { useTranslation } from 'react-i18next';
 import { Container } from 'semantic-ui-react';
-import Dropdown from '../Dropdown/Dropdown.jsx';
 
+import Dropdown from '../Dropdown/Dropdown.jsx';
 import { APIContext, API_URL } from '../API/APIContext.jsx';
 
 function withVerb(WrappedComponent, title) {
   return () => {
+    const { t } = useTranslation();
     const [verb, setVerb] = useState(null);
     const [filters, setFilters] = useState([]);
 
@@ -41,7 +43,7 @@ function withVerb(WrappedComponent, title) {
 
     return (
       <Container>
-        <h1>{title}</h1>
+        <h1>{t(title)}</h1>
         <Dropdown
           verbs={verbs}
           tenses={tenses}
